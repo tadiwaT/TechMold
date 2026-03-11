@@ -6,6 +6,7 @@ import { useRouter, usePathname } from 'next/navigation'
 import Link from 'next/link'
 import { createClient } from '@/lib/supabase/client'
 import toast from 'react-hot-toast'
+import { PWAInstallBanner } from '@/components/ui/PWAInstallBanner'
 
 function PosIcon() {
   return (
@@ -153,6 +154,9 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
             )
           })}
         </nav>
+
+        {/* Install banner */}
+        <PWAInstallBanner />
 
         {/* Connection status */}
         <div className="px-3 pb-2">
